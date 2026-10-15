@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Ingénierie | Jean Toussaint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <!-- Script pour le moteur 3D interactif -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+    .bento-shadow { box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+  </style>
+</head>
+<body class="text-gray-900 antialiased selection:bg-blue-600 selection:text-white flex flex-col min-h-screen">
+
+  <!-- ========================================== -->
+  <!-- VUE PRINCIPALE (ACCUEIL)                   -->
+  <!-- ========================================== -->
+  <div id="view-home" class="block w-full flex-grow">
+    
+    <!-- Navbar épurée -->
+    <nav class="fixed w-full top-0 bg-[#f8f9fa]/80 backdrop-blur-md z-50 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex justify-between items-center">
+        <span class="font-black text-2xl tracking-tighter text-gray-900">Jean Toussaint</span>
+        <div class="flex gap-6 text-sm font-bold text-gray-600">
+          <a href="mailto:jean.toussaint@ipsa.fr" class="hover:text-blue-600 transition-colors">Email</a>
+          <a href="https://linkedin.com/in/jean-toussaint-75872a2b6" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">LinkedIn</a>
+          <a href="https://github.com/TOUSSAINTJean31" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">GitHub</a>
+          <a href="cv.pdf" download class="text-blue-600 hover:text-blue-800 transition-colors">Télécharger CV</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-10 pt-32 pb-24">
+      
+      <!-- Hero Section -->
+      <section class="flex flex-col-reverse md:flex-row justify-between items-start md:items-center gap-12 mb-24">
+        <div class="max-w-3xl">
+          <p class="text-blue-600 font-bold tracking-widest uppercase mb-4 text-sm">Portfolio Élève-Ingénieur 2026</p>
+          <h1 class="text-5xl md:text-8xl font-black text-gray-900 tracking-tighter leading-[1.05] mb-8">
+            Ingénierie<br/>Aéronautique<br/>& Spatiale.
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mb-8">
+            Étudiant à l'<strong>IPSA Toulouse</strong> et actuellement en échange académique à Telkom University (Indonésie). Passionné par les systèmes aérospatiaux et aéronautiques, je développe des projets complets alliant conception mécanique (CAO), intégration électronique et programmation de systèmes embarqués.
+          </p>
+          
+          <!-- Bandeau de compétences clés (Hard Skills) -->
+          <div class="flex flex-wrap gap-2.5">
+            <span class="px-4 py-2 bg-white text-gray-800 font-bold text-xs tracking-wide rounded-full border border-gray-200 shadow-sm">CATIA V5 & Fusion 360</span>
+            <span class="px-4 py-2 bg-white text-gray-800 font-bold text-xs tracking-wide rounded-full border border-gray-200 shadow-sm">Python</span>
+            <span class="px-4 py-2 bg-white text-gray-800 font-bold text-xs tracking-wide rounded-full border border-gray-200 shadow-sm">C++ / MicroPython</span>
+            <span class="px-4 py-2 bg-white text-gray-800 font-bold text-xs tracking-wide rounded-full border border-gray-200 shadow-sm">Systèmes Embarqués & PID</span>
+          </div>
+        </div>
+        <div class="flex-shrink-0 relative">
+          <div class="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+            <img src="photo-profil.jpg" alt="Jean Toussaint" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Jean+Toussaint&background=random&size=200'"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section : Domaines de Compétences (Grille Bento) -->
+      <section class="mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Titre & Intro -->
+          <div class="md:col-span-3 bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col md:flex-row gap-8 items-center">
+            <div class="md:w-1/3">
+              <h2 class="text-3xl md:text-4xl font-black tracking-tight text-gray-900 leading-tight">Approche & Domaines de Compétences</h2>
+            </div>
+            <div class="md:w-2/3 border-l-0 md:border-l-2 border-gray-100 md:pl-8">
+              <p class="text-gray-600 text-lg leading-relaxed">
+                Mon parcours s'articule autour d'une approche pluridisciplinaire de l'ingénierie : de la modélisation théorique et numérique jusqu'à l'intégration matérielle, le prototypage et la validation expérimentale.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Pilier 1 : Conception & CAO -->
+          <div class="bg-white p-8 rounded-[2rem] bento-shadow flex flex-col items-start gap-4 hover:-translate-y-1 transition-transform">
+            <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shadow-sm border border-blue-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Conception & CAO Mécanique</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Modélisation, gestion d'assemblages complexes (+300 pièces), analyse de masse/centrage et rétro-ingénierie sous <strong>CATIA V5</strong> et <strong>Fusion 360</strong>.
+            </p>
+          </div>
+          
+          <!-- Pilier 2 : Systèmes Embarqués & Contrôle -->
+          <div class="bg-white p-8 rounded-[2rem] bento-shadow flex flex-col items-start gap-4 hover:-translate-y-1 transition-transform">
+            <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center shadow-sm border border-emerald-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Systèmes Embarqués & Contrôle</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Architecture électronique, intégration de capteurs/actionneurs et implémentation de lois de commande asservies (<strong>PID, MicroPython, C++, Betaflight</strong>).
+            </p>
+          </div>
+          
+          <!-- Pilier 3 : Logiciel & Ouverture Internationale -->
+          <div class="bg-white p-8 rounded-[2rem] bento-shadow flex flex-col items-start gap-4 hover:-translate-y-1 transition-transform">
+            <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center shadow-sm border border-indigo-100">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Ouvertures International</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Capacité de travail en anglais en environnement international.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Liste des Projets Réalisés -->
+      <section>
+        <div class="border-b-2 border-gray-900 pb-4 mb-8">
+          <h2 class="text-4xl font-black text-gray-900 tracking-tight">Projets réalisés</h2>
+        </div>
+        
+        <div class="flex flex-col">
+          
+          <!-- Projet : GreenSky -->
+          <div onclick="showProject('view-greensky')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b border-gray-200 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-green-600 font-bold text-sm tracking-widest uppercase mb-2 block">Python & Éco-conception</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-green-600 transition-colors">GreenSky ACV</h3>
+              <p class="text-gray-500 text-lg">Développement d'une interface graphique (Tkinter) permettant le calcul de l'Analyse du Cycle de Vie (ACV) d'un objet.</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-green-50 flex items-center justify-center text-green-600 border border-green-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet : Drone FPV -->
+          <div onclick="showProject('view-fpv')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b border-gray-200 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-teal-600 font-bold text-sm tracking-widest uppercase mb-2 block">Aéronautique & Radio</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">Drone FPV 5"</h3>
+              <p class="text-gray-500 text-lg">Montage, câblage et configuration sous Betaflight d'un drone FPV cinématique.</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 border border-teal-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet : Rover -->
+          <div onclick="showProject('view-rover')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b border-gray-200 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-blue-600 font-bold text-sm tracking-widest uppercase mb-2 block">Mécatronique & Code</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">Rover Mecanum</h3>
+              <p class="text-gray-500 text-lg">Conception d'un rover autonome (Raspberry Pi Pico) : cinématique omnidirectionnelle, asservissement moteur (PI) et évitement d'obstacles.</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet : Arduino -->
+          <div onclick="showProject('view-arduino')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b border-gray-200 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-amber-600 font-bold text-sm tracking-widest uppercase mb-2 block">Électronique & Code</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-amber-600 transition-colors">Prototypage Arduino</h3>
+              <p class="text-gray-500 text-lg">Montage d'un pont en H pour le contrôle de moteur DC.</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet : CATIA V5 -->
+          <div onclick="showProject('view-catia')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b border-gray-200 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-emerald-600 font-bold text-sm tracking-widest uppercase mb-2 block">CAO & Mécanique</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Conception CATIA V5</h3>
+              <p class="text-gray-500 text-lg">De la modélisation à l'assemblage d'un robot de combat (335 pièces).</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet : CNC -->
+          <div onclick="showProject('view-cnc')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b border-gray-200 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-purple-600 font-bold text-sm tracking-widest uppercase mb-2 block">Usinage & Électrotechnique</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">Machine CNC 1.5m²</h3>
+              <p class="text-gray-500 text-lg">Montage d'une fraiseuse, câblage triphasé, commande numérique et conception de fixations.</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 border border-purple-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet : Fusion 360 -->
+          <div onclick="showProject('view-fusion')" class="group flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-b-2 border-gray-900 cursor-pointer hover:bg-white transition-all duration-300 px-6 -mx-6 rounded-2xl">
+            <div class="max-w-2xl">
+              <span class="text-orange-600 font-bold text-sm tracking-widest uppercase mb-2 block">CAO & Impression 3D</span>
+              <h3 class="text-3xl font-black text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Conception Fusion 360</h3>
+              <p class="text-gray-500 text-lg">Rétro-ingénierie d'une pièce de garage à partir d'une photo et conception d'un porte-téléphone pour drone FPV.</p>
+            </div>
+            <div class="mt-6 md:mt-0 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all duration-300">
+              <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center text-orange-600 border border-orange-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- FIN DE LA VUE PRINCIPALE -->
+
+  <!-- ==================================================== -->
+  <!-- VUES DÉTAILLÉES DES PROJETS                          -->
+  <!-- ==================================================== -->
+
+  <!-- VUE DÉTAIL : GREENSKY ACV -->
+  <div id="view-greensky" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    
+    <div class="flex flex-col gap-12">
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center text-center max-w-4xl mx-auto border-t-8 border-green-500">
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-4">
+          <span class="px-3 py-1 text-xs font-bold text-green-700 bg-green-50 rounded-full">Projet Académique IPSA</span>
+          <span class="px-3 py-1 text-xs font-bold text-gray-700 bg-gray-100 rounded-full">Automne 2025</span>
+        </div>
+        <h1 class="text-4xl font-black tracking-tight mb-4">GreenSky : Logiciel d'ACV (Python)</h1>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          Développement d'un calculateur d'Analyse du Cycle de Vie (ACV) pour quantifier l'impact environnemental de produits industriels. Utilisation de Python pour la logique de calcul sur une base de données pré-établie, et intégration de la bibliothèque <strong>Tkinter</strong> pour créer une interface utilisateur graphique (GUI) fluide et accessible.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div class="flex flex-col gap-8 h-full">
+            <div class="bg-gray-900 text-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center h-full">
+                <h3 class="text-2xl font-black tracking-tight mb-4 text-green-400">Le fonctionnement du calculateur</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                  L'objectif est d'évaluer l'impact environnemental d'un produit tout au long de son cycle de vie, à travers 4 étapes clés : 
+                </p>
+                <ol class="list-decimal pl-5 space-y-2 text-gray-400 mb-6">
+                  <li>L'extraction des matières premières.</li>
+                  <li>La fabrication du produit.</li>
+                  <li>Son utilisation.</li>
+                  <li>Sa fin de vie (recyclage, enfouissement...).</li>
+                </ol>
+                <p class="text-gray-300 leading-relaxed">
+                  L'application, conçue avec <strong>Tkinter</strong>, pose une série de questions à l'utilisateur (matériaux utilisés, processus de fabrication, distance de transport, etc.) et interroge une base de données pour générer un bilan carbone complet, des conseils d'optimisation et des graphiques.
+                </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-[2.5rem] bento-shadow border border-gray-100 flex-grow flex flex-col items-center">
+                <h4 class="font-bold text-gray-800 mb-4 px-2 w-full text-left">Exemple de questionnaire (Interface)</h4>
+                <img src="photo-greensky-questions.png" alt="Capture des questions du logiciel" class="w-full h-auto rounded-[1.5rem] object-cover shadow-sm" onerror="this.src='https://placehold.co/800x400/f3f4f6/a1a1aa?text=Capture+Questions+ACV'"/>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8 h-full">
+            <div class="bg-white p-6 rounded-[2.5rem] bento-shadow border border-gray-100 flex-grow flex flex-col items-center">
+                <h4 class="font-bold text-gray-800 mb-4 px-2 w-full text-left">Affichage des résultats & Graphiques</h4>
+                <img src="photo-greensky-resultats.png" alt="Capture des résultats et graphiques" class="w-full h-auto rounded-[1.5rem] object-cover shadow-sm" onerror="this.src='https://placehold.co/800x400/f3f4f6/a1a1aa?text=Capture+Resultats+et+Graphiques'"/>
+            </div>
+
+            <div class="bg-green-50 p-10 rounded-[2.5rem] bento-shadow border border-green-200 flex flex-col justify-center h-full">
+                 <h3 class="text-2xl font-black tracking-tight mb-4 text-green-800">Cas d'étude : La canette en aluminium</h3>
+                 <p class="text-green-900 leading-relaxed mb-6">
+                    Afin de valider notre modèle, nous avons testé notre application sur l'analyse du cycle de vie d'une canette en aluminium. 
+                 </p>
+                 <div class="w-full flex justify-center mb-4">
+                     <img src="photo-canette.jpg" alt="Photo test canette" class="max-h-48 rounded-xl shadow-md object-contain" onerror="this.src='https://placehold.co/400x300/e2e8f0/94a3b8?text=Photo+Canette'"/>
+                 </div>
+                 <p class="text-green-800 font-semibold text-center">
+                    Le logiciel a permis d'identifier que la phase d'extraction de l'aluminium était la plus émettrice et a proposé des recommandations d'éco-conception adaptées.
+                 </p>
+            </div>
+        </div>
+      </div>
+      
+      <!-- BASE DE DONNÉES PYTHON -->
+      <div class="bg-gray-900 p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center w-full mt-4">
+        <h3 class="text-2xl font-black tracking-tight mb-4 text-green-400">Traitement de la Base de Données en Python</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          La gestion des données d'impact environnemental s'effectue via des dictionnaires imbriqués. Cela permet d'associer facilement à chaque matériau ses facteurs d'émission pour chaque étape de son cycle de vie (extraction, fabrication, transport, etc.), assurant ainsi une recherche instantanée et un code lisible.
+        </p>
+        <pre class="text-gray-300 text-sm font-mono overflow-x-auto bg-black p-4 rounded-xl mb-4"><code>DATA_DB = {  # Defini tout le dictionnaire qui traduit notre base de donnée
+    "MATERIAUX": {
+        "Métal": {
+            "Acier Standard": 2,
+            "Acier Inox": 6.1,
+            "Aluminium (Vierge)": 17,
+            "Aluminium (Recyclé)": 2.0,
+            "Cuivre": 4,
+        },
+        "Plastique": {
+            "PET (Bouteille)": 2.2,
+            "PVC": 3,
+            "ABS": 3.1,
+            "Polypropylène": 2.0,
+            "Plastique Recyclé": 0.5,
+        },
+        "Bois": {
+            "Pin/Sapin": 0.4,
+            "Chêne": 0.6,
+            "Contreplaqué": 0.9,
+            "Bois Recyclé": 0.1,
+        },
+        "Textile": {
+            "Coton": 16,
+            "Polyester": 2.1,
+            "Laine": 15.0,
+            "Chanvre": 1.5,
+        },
+        "Autre": {"Verre": 0.9, "Céramique": 0.8, "Papier/Carton": 0.9},
+    },
+    "FABRICATION": {
+        "Inconnue / Aucune": 0.0,
+        "Moulage Injection": 3,
+        "Usinage CNC (Métal)": 0.1,
+        "Forge": 0.5,
+        "Assemblage Manuel": 0.1,
+        "Impression 3D": 1.2,
+    },
+    "TRANSPORT": {
+        "Camion (Routier)": 0.1,
+        "Bateau (Maritime)": 0.009,
+        "Avion (Cargo)": 1.25,
+        "Train (Fret)": 0.0175,
+        "Camionnette": 0.2,
+    },
+    "ENERGIE": {
+        "Électricité (Mix France)": 0.06,
+        "Électricité (Mix Europe)": 0.40,
+        "Électricité (Charbon/Monde)": 1,
+        "Gaz Naturel": 0.443,
+        "Fioul": 0.7,
+        "Solaire": 0.04,
+    },
+}</code></pre>
+        <a href="https://github.com/TOUSSAINTJean31/Greensky-Methode-ACV" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300 font-semibold transition-colors w-fit text-sm mb-6">
+          <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Voir le code sur GitHub
+        </a>
+      </div>
+
+      <!-- Perspectives d'amélioration -->
+      <div class="bg-gray-100 p-8 rounded-[2.5rem] border border-gray-200 mt-4">
+        <h3 class="text-xl font-bold mb-3 text-gray-800 flex items-center"><span class="mr-2">🚀</span> Perspectives d'amélioration</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Pour faire évoluer ce logiciel, l'intégration de la bibliothèque <strong>Pandas</strong> permettrait d'optimiser la gestion de la base de données. Actuellement basée sur des dictionnaires imbriqués, une structure en DataFrame via l'importation de fichiers CSV faciliterait le traitement massif de données, l'ajout de nouveaux matériaux par l'utilisateur, et la réalisation de filtres ou d'analyses statistiques complexes de manière beaucoup plus performante et simple.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VUE DÉTAIL : DRONE FPV -->
+  <div id="view-fpv" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    
+    <div class="flex flex-col gap-12">
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center text-center max-w-4xl mx-auto border-t-8 border-teal-500">
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-4">
+          <span class="px-3 py-1 text-xs font-bold text-teal-700 bg-teal-50 rounded-full">Aéronautique & Systèmes Embarqués</span>
+          <span class="px-3 py-1 text-xs font-bold text-gray-700 bg-gray-100 rounded-full">Année 2021 (avec évolution constante encore aujourd'hui)</span>
+        </div>
+        <h1 class="text-4xl font-black tracking-tight mb-4">Montage & Configuration d'un Drone FPV 5 Pouces</h1>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          Assemblage et mise au point d'un drone 5 pouces sur mesure. Le projet englobe le câblage de l'électronique embarquée, le paramétrage de la transmission vidéo analogique et le réglage de la stabilité dynamique par asservissement PID.
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-4 rounded-[2.5rem] bento-shadow flex items-center justify-center">
+          <img src="photo-drone-cablage.jpg" alt="Montage et câblage du drone FPV 5 pouces" class="w-full h-[400px] rounded-3xl object-cover shadow-sm" onerror="this.src='https://placehold.co/800x600/f3f4f6/a1a1aa?text=Photo+Cablage+Drone'"/>
+        </div>
+        <div class="bg-gray-900 text-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center">
+          <h3 class="text-2xl font-black tracking-tight mb-4">Architecture & Câblage</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Un châssis de 5 pouces nécessite une électronique capable de gérer des courants forts et de traiter les informations des capteurs à haute vitesse.
+          </p>
+          <ul class="list-disc pl-5 space-y-3 text-gray-400">
+            <li><strong>Intégration de la caméra :</strong> Soudure de la caméra FPV sur la carte de vol (Flight Controller) via les UARTs dédiés.</li>
+            <li><strong>Câblage de l'ESC :</strong> Soudure des moteurs brushless et gestion de l'alimentation (LiPo 4S).</li>
+            <li><strong>Récepteur (RX) :</strong> Connexion du récepteur radio pour assurer une liaison fiable avec la radiocommande.</li>
+            <li><strong>Capteurs & Télémétrie :</strong> Intégration d'un module GPS, d'un baromètre et d'un buzzer autonome via les bus UART et I2C pour le suivi télémétrique (altitude, vitesse, coordonnées) et la sécurité du drone.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center border-t-8 border-indigo-500 order-2 lg:order-1">
+          <h3 class="text-2xl font-black tracking-tight mb-4">Transmission VTX & Betaflight</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            <strong>Pourquoi l'analogique ?</strong> Pour un drone 5 pouces rapide, la latence doit être quasi nulle. La transmission vidéo analogique offre ce temps de réponse immédiat indispensable au pilotage.
+          </p>
+          <ul class="list-disc pl-5 space-y-3 text-gray-600">
+            <li><strong>Tables VTX :</strong> Paramétrage des fréquences (Bandes, Canaux) et de la puissance d'émission (mW) directement depuis Betaflight.</li>
+            <li><strong>Réglage des PID :</strong> Ajustement des valeurs Proportionnelles, Intégrales et Dérivées pour verrouiller l'attitude du drone et obtenir un vol parfaitement fluide.</li>
+            <li><strong>GPS & Return to Home :</strong> Configuration du mode "Rescue" (RTH) dans Betaflight pour garantir le retour automatique du drone en cas de perte de signal radio (Failsafe).</li>
+            <li><strong>Résolution de bruit vidéo :</strong> Les moteurs généraient des parasites électriques (bruit) altérant le signal vidéo (lignes à l'écran). Ce problème a été résolu en soudant un <strong>condensateur Low ESR </strong> sur les pads d'alimentation de l'ESC, lissant ainsi parfaitement la tension.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-[2.5rem] bento-shadow flex flex-col items-center justify-center border border-gray-200 order-1 lg:order-2">
+          <div class="w-full flex items-center justify-between mb-4 px-2">
+            <h3 class="text-gray-800 font-bold text-sm uppercase tracking-wider">Tuning PID & Filtres</h3>
+          </div>
+          <div class="w-full rounded-2xl overflow-hidden aspect-video relative shadow-inner">
+            <img src="photo-pid-tuning.jpg" alt="Interface Betaflight Tuning PID" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x450/f3f4f6/a1a1aa?text=Remplacer+par+Log+Blackbox+ou+OSD'"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-gray-900 text-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center border-t-8 border-orange-500">
+          <h3 class="text-2xl font-black tracking-tight mb-4">Adaptation Captation Vidéo</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Pour ramener des images cinématiques de haute qualité tout en gardant l'agilité du drone, j'ai adapté le châssis pour la captation vidéo.
+          </p>
+          <ul class="list-disc pl-5 space-y-3 text-gray-400">
+            <li><strong>Support sur-mesure :</strong> Impression 3D d'un support incliné en filament flexible pour absorber les vibrations, protéger la caméra et obtenir une image fluide</li>
+            <li><strong>Équilibrage :</strong> Compensation du déséquilibre créé par le changement de centre de masse via les réglages PID pour conserver un vol stable.</li>
+          </ul>
+        </div>
+        <div class="bg-black p-4 rounded-[2.5rem] bento-shadow flex items-center justify-center relative overflow-hidden">
+          <video controls muted preload="metadata" playsinline class="w-full h-full rounded-[1.5rem] object-cover max-h-[400px]">
+            <source src="video-vol-drone.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+          </video>
+        </div>
+      </div>
+
+      <!-- Résultat Final : Drone -->
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center border-t-8 border-gray-900">
+        <div class="w-full flex items-center justify-between mb-6 px-2">
+            <h3 class="text-gray-800 font-bold text-lg uppercase tracking-wider">Résultat Final : Setup Cinématique Complet</h3>
+        </div>
+        <div class="w-full flex justify-center rounded-3xl shadow-sm relative">
+            <img src="photo-drone-gopro.jpg" alt="Drone FPV complet avec support TPU" class="w-full max-w-sm aspect-[3/4] object-cover rounded-3xl" onerror="this.src='https://placehold.co/900x1200/f3f4f6/a1a1aa?text=Photo+Drone+Fini+Avec+Support'"/>
+        </div>
+        <p class="text-gray-500 text-center mt-6">Le drone équipé de son support d'absorption de vibrations en TPU, aprés un crash.                                                                                                           </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VUE DÉTAIL : ARDUINO -->
+  <div id="view-arduino" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    <div class="flex flex-col gap-12">
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center text-center max-w-4xl mx-auto border-t-8 border-amber-500">
+        <span class="inline-block px-3 py-1 mb-4 text-xs font-bold text-amber-700 bg-amber-50 rounded-full">Systèmes Embarqués & Électronique</span>
+        <h1 class="text-4xl font-black tracking-tight mb-4">Prototypage sous Arduino</h1>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          Exploration de l'écosystème Arduino à travers la commande de puissance pour actionneurs mécaniques.
+        </p>
+      </div>
+      
+      <!-- PROJET CACHÉ : Station Météo -->
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch border-t-8 border-blue-400 hidden">
+        <div class="flex flex-col justify-between h-full">
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-blue-500 font-bold tracking-wider text-sm uppercase">Projet 1 : Acquisition de données</span>
+              <span class="px-2.5 py-0.5 text-xs font-bold text-blue-700 bg-blue-50 rounded-full">Printemps 2022</span>
+            </div>
+            <h2 class="text-3xl font-black tracking-tight mb-4">Station Météo (DHT22 & LCD)</h2>
+            <p class="text-gray-600 leading-relaxed text-lg mb-4">
+              Conception d'une station météorologique miniature. Le système utilise un capteur <strong>DHT22</strong> pour lire la température et le taux d'humidité avec une grande précision, et affiche ces données en temps réel sur un <strong>écran LCD (I2C)</strong>.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-2 rounded-3xl border border-gray-200 mt-4 flex-grow flex items-center justify-center min-h-[250px]">
+            <img src="photo-station-meteo.jpg" alt="Montage IRL de la station météo" class="w-full h-full object-cover rounded-[1.5rem]" onerror="this.src='https://placehold.co/600x400/f3f4f6/a1a1aa?text=Photo+Station+Meteo+IRL'"/>
+          </div>
+        </div>
+        <div class="bg-gray-900 p-8 rounded-[2.5rem] bento-shadow flex-grow flex flex-col justify-center">
+          <div class="flex items-center justify-between mb-4 border-b border-gray-700 pb-2">
+            <h3 class="text-white font-semibold text-sm uppercase">Code d'acquisition (C++)</h3>
+          </div>
+          <pre class="text-gray-300 text-xs sm:text-sm font-mono overflow-x-auto mb-4"><code>#include &lt;DHT.h&gt;
+#include &lt;Wire.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+#define DHTPIN 2     
+#define DHTTYPE DHT22   
+
+DHT dht(DHTPIN, DHTTYPE);
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  dht.begin();
+  lcd.setCursor(0,0);
+  lcd.print("Init Meteo...");
+  delay(2000);
+}
+
+void loop() {
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Temp: ");
+  lcd.print(t);
+  lcd.print(" C");
+
+  lcd.setCursor(0,1);
+  lcd.print("Hum:  ");
+  lcd.print(h);
+  lcd.print(" %");
+  
+  delay(2000);
+}</code></pre>
+          <a href="https://github.com/TOUSSAINTJean31/Station-M-t-o-" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors mt-2 text-sm">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Voir le code sur GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center py-2 hidden">
+        <div class="w-1 h-12 bg-gray-300 rounded-full"></div>
+      </div>
+
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col gap-10 border-t-8 border-red-500">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-6 justify-center">
+            <div class="flex items-center gap-2">
+              <span class="text-red-500 font-bold tracking-wider text-sm uppercase">Projet 2 : Électronique de puissance</span>
+              <span class="px-2.5 py-0.5 text-xs font-bold text-red-700 bg-red-50 rounded-full">Hiver 2023</span>
+            </div>
+            <h2 class="text-3xl font-black tracking-tight">Pont en H pour Moteur CC</h2>
+            <p class="text-gray-600 leading-relaxed text-lg mb-2">
+              Conception et simulation d'un pont en H à l'aide de transistors pour le contrôle bidirectionnel d'un moteur à courant continu.
+            </p>
+            <div class="bg-red-50 text-red-800 p-4 rounded-2xl text-sm border border-red-100">
+                <strong>Note sur la fabrication :</strong> Le montage complet n'a pas été réalisé sur circuit imprimé physique. En effet, concevoir ce circuit avec des transistors et diodes revenait plus cher et prenait plus de place que d'utiliser directement un composant intégré du commerce.
+            </div>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-[2.5rem] bento-shadow">
+            <div class="flex items-center justify-between mb-4 border-b border-gray-700 pb-2">
+              <h3 class="text-white font-semibold text-sm uppercase">Logique de commande (C++)</h3>
+            </div>
+            <pre class="text-gray-300 text-sm font-mono overflow-x-auto mb-4"><code>const int pinAvant = 9;  
+const int pinArriere = 10; 
+
+void setup() {
+  pinMode(pinAvant, OUTPUT);
+  pinMode(pinArriere, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(pinArriere, LOW); 
+  digitalWrite(pinAvant, HIGH);
+  delay(2000);
+  
+  digitalWrite(pinAvant, LOW);
+  digitalWrite(pinArriere, LOW);
+  delay(1000);
+  
+  digitalWrite(pinAvant, LOW); 
+  digitalWrite(pinArriere, HIGH);
+  delay(2000);
+}</code></pre>
+            <a href="https://github.com/TOUSSAINTJean31/Pont-en-H" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-red-400 hover:text-red-300 font-semibold transition-colors mt-2 text-sm">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Voir le code sur GitHub
+            </a>
+          </div>
+        </div>
+        <div class="w-full bg-gray-50 p-3 rounded-[2.5rem] border border-gray-200 flex items-center justify-center">
+          <img src="image_9bc6b9.png" alt="Montage IRL et Simulation Pont en H" class="w-full max-h-[600px] object-cover rounded-[2rem] shadow-sm" />
+        </div>
+      </div>
+      
+      <!-- Perspectives d'amélioration -->
+      <div class="bg-gray-100 p-8 rounded-[2.5rem] border border-gray-200 mt-4">
+        <h3 class="text-xl font-bold mb-3 text-gray-800 flex items-center"><span class="mr-2">🚀</span> Perspectives d'amélioration</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Dans ces prototypes, l'utilisation de la fonction <code>delay()</code> bloque temporairement le microcontrôleur pendant l'attente, l'empêchant de réaliser d'autres tâches simultanément (comme lire un capteur d'arrêt d'urgence pendant que le moteur tourne). Une amélioration pourrait consister à remplacer ces délais par des timers non-bloquants basés sur la fonction <strong><code>millis()</code></strong>. 
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VUE DÉTAIL : ROVER MECANUM -->
+  <div id="view-rover" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Colonne Gauche : Présentation + Nouvelle Bulle PI -->
+      <div class="flex flex-col gap-8">
+        <div class="bg-white p-4 rounded-[2.5rem] bento-shadow">
+          <img src="image_9c2798.jpg" alt="Rover Mecanum" class="w-full h-auto rounded-3xl object-cover" />
+        </div>
+        
+        <div class="bg-white p-10 rounded-[2.5rem] bento-shadow border-t-8 border-blue-500">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="px-3 py-1 text-xs font-bold text-blue-700 bg-blue-50 rounded-full">Systèmes Embarqués</span>
+            <span class="px-3 py-1 text-xs font-bold text-gray-700 bg-gray-100 rounded-full">Hiver / Printemps 2026</span>
+          </div>
+          <h1 class="text-4xl font-black tracking-tight mb-6">Rover Omnidirectionnel</h1>
+          <p class="text-gray-600 leading-relaxed text-lg mb-4">Conception et assemblage d'un rover basé sur un Raspberry Pi Pico avec roues mecanum.</p>
+          <p class="text-gray-600 leading-relaxed text-lg mb-4">Implémentation d'une régulation PI (Proportionnel Intégral) avec anti-windup, communication I2C, et évitement d'obstacles par balayage à ultrasons.</p>
+        </div>
+
+        <!-- Bulle PI insérée juste en dessous de la présentation -->
+        <div class="bg-blue-50 p-8 rounded-[2.5rem] bento-shadow border border-blue-100 flex flex-col gap-4">
+            <h4 class="text-blue-900 font-black text-xl flex items-center"><span class="mr-2">🎯</span> Démonstration & Validation PI</h4>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Pour vérifier l'efficacité de notre modèle, nous avons analysé le décalage entre le point de départ et d'arrivée sur une trajectoire carrée répétée. Le résultat : un <strong>décalage minime de seulement 3 cm sur 10 tours</strong>, prouvant la fiabilité de l'asservissement PI.
+            </p>
+            <div class="bg-white p-4 rounded-[1.5rem] border border-blue-200 mt-2">
+              <h5 class="text-blue-800 font-bold mb-1 flex items-center text-sm"><span class="mr-2">🚀</span> Perspectives d'amélioration</h5>
+              <p class="text-gray-600 text-xs leading-relaxed">
+                Il serait pertinent de développer un correcteur PI <strong>unique et indépendant pour chaque moteur</strong>, et d'y intégrer la composante <strong>Dérivée (PID)</strong> pour anticiper instantanément les variations brusques.
+              </p>
+            </div>
+        </div>
+      </div>
+      
+      <!-- Colonne Droite : Code + Vidéo PI (Format Paysage) -->
+      <div class="bg-gray-900 p-8 rounded-[2.5rem] bento-shadow flex-grow flex flex-col">
+        <div class="flex items-center justify-between mb-6 border-b border-gray-700 pb-4">
+          <h3 class="text-white font-semibold text-sm uppercase">Cinématique & Régulation PI (MicroPython)</h3>
+        </div>
+        <pre class="text-gray-300 text-sm font-mono overflow-x-auto mb-4"><code>def speeds_to_omegas(speeds):
+    R = 0.03
+    H = 0.09
+    L = 0.09
+    omega_target = []
+    omega_target.append(1/R*(speeds[0]+speeds[1]) - (H*L)/R * speeds[2])
+    omega_target.append(1/R*(speeds[0]-speeds[1]) - (H*L)/R * speeds[2])
+    omega_target.append(1/R*(speeds[0]-speeds[1]) + (H*L)/R * speeds[2])
+    omega_target.append(1/R*(speeds[0]+speeds[1]) + (H*L)/R * speeds[2])
+    return omega_target
+
+def move_rover(speeds, duration):
+    Kp = 0.01
+    Ki = 1
+    omega_target = speeds_to_omegas(speeds)
+    
+    while ticks_diff(ticks_ms(), y) <= duration * 1000:
+        b = read_encoder_deltas()
+        c = calculate_omega_roue(b)
+        for i in range(0, 4):
+            erreur.append(omega_target[i] - c[i])
+        t = ticks_ms()
+        R1 += erreur[0] * ticks_diff(t, d) / 1000
+        R2 += erreur[1] * ticks_diff(t, d) / 1000
+        R3 += erreur[2] * ticks_diff(t, d) / 1000
+        R4 += erreur[3] * ticks_diff(t, d) / 1000
+        
+        # Axe 1
+        if Kp * erreur[0] + Ki * R1 >= 6:
+            z = 6
+            R1 -= erreur[0] * ticks_diff(t, d) / 1000
+        else: 
+            z = Kp * erreur[0] + Ki * R1
+            
+        # Axe 2
+        if Kp * erreur[1] + Ki * R2 >= 6:
+            u = 6
+            R2 -= erreur[1] * ticks_diff(t, d) / 1000
+        else: 
+            u = Kp * erreur[1] + Ki * R2
+            
+        # Axe 3
+        if Kp * erreur[2] + Ki * R3 >= 6:
+            v = 6
+            R3 -= erreur[2] * ticks_diff(t, d) / 1000
+        else: 
+            v = Kp * erreur[2] + Ki * R3
+            
+        # Axe 4
+        if Kp * erreur[3] + Ki * R4 >= 6:
+            w = 6
+            R4 -= erreur[3] * ticks_diff(t, d) / 1000
+        else: 
+            w = Kp * erreur[3] + Ki * R4
+            
+        control_motor_pwm(int(z * 3600 / 6), int(u * 3600 / 6), int(v * 3600 / 6), int(w * 3600 / 6))
+        erreur = []
+        d = t</code></pre>
+        <a href="https://github.com/TOUSSAINTJean31/Projet-Rover-Mecanum" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors mt-2 mb-6 text-sm">
+          <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Voir le code sur GitHub
+        </a>
+        
+        <h4 class="text-white font-semibold mb-4 border-t border-gray-700 pt-6">Démonstration vidéo (Déplacement)</h4>
+        <!-- Vidéo ajustée en format paysage sans grosses bandes noires -->
+        <div class="bg-black p-2 rounded-[2rem] border border-gray-700 w-full overflow-hidden">
+          <video controls muted preload="metadata" playsinline class="w-full h-auto aspect-video rounded-xl object-cover">
+            <source src="video-rover-pi.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+          </video>
+        </div>
+
+      </div>
+      
+      <!-- BLOC AUTONOMIE ROVER -->
+      <div class="col-span-1 lg:col-span-2 bg-gray-900 p-8 rounded-[2.5rem] bento-shadow mt-4">
+        <h3 class="text-white font-bold text-2xl mb-8 flex items-center"><span class="text-3xl mr-3">🤖</span> Autonomie : Capteurs et Logique d'Esquive</h3>
+        
+        <!-- 1. Capteur Ultrason (Refondu avec photo et explication intégrées) -->
+        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 mb-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                <div class="flex flex-col h-full">
+                    <h4 class="text-blue-400 font-semibold mb-4 text-lg">1. Capteur Ultrason</h4>
+                    <pre class="text-gray-400 text-xs font-mono overflow-x-auto bg-black p-4 rounded-xl flex-grow"><code>def distance_cm():
+    trig.low()
+    sleep_us(2)
+    trig.high()
+    sleep_us(10)
+    trig.low()
+
+    while echo.value() == 0:
+        start = ticks_us()
+
+    while echo.value() == 1:
+        end = ticks_us()
+
+    duration = ticks_diff(end, start)
+    distance = duration * 0.0343 / 2
+    return distance</code></pre>
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="bg-white p-4 rounded-xl flex items-center justify-center h-48 border border-gray-600">
+                        <img src="photo-hcsr04.jpg" alt="Capteur Ultrason HC-SR04" class="max-h-full object-contain rounded-lg" onerror="this.src='https://placehold.co/400x300/f3f4f6/a1a1aa?text=Photo+HC-SR04'"/>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Le capteur émet une impulsion sonore à haute fréquence. L'onde rebondit sur l'obstacle et revient vers le récepteur. En mesurant le temps de vol de cette impulsion sonore et en connaissant la vitesse de cette onde, le microcontrôleur calcule la distance frontale avec précision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Servomoteur + Vidéo -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-8">
+            <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 flex flex-col">
+                <h4 class="text-blue-400 font-semibold mb-2">2. Servomoteur (Balayage)</h4>
+                <p class="text-gray-300 text-sm mb-4">Orientation du capteur ultrason pour cartographier l'environnement sur 180°.</p>
+                <pre class="text-gray-400 text-xs font-mono overflow-x-auto bg-black p-3 rounded-xl flex-grow"><code>def set_angle(angle):
+    min_us = 500
+    max_us = 2500
+    pulse = min_us + (angle / 180) * (max_us - min_us)
+    duty = int((pulse / 20000) * 65535)  
+    servo.duty_u16(duty)</code></pre>
+            </div>
+            <div class="bg-black p-4 rounded-[2rem] bento-shadow flex items-center justify-center relative overflow-hidden border border-gray-700">
+                <video controls muted preload="metadata" playsinline class="w-full h-full rounded-2xl object-cover max-h-[250px]">
+                  <source src="video-servo-balayage.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+                </video>
+            </div>
+        </div>
+
+        <!-- 3. Logique d'autonomie -->
+        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 mb-8">
+            <h4 class="text-blue-400 font-semibold mb-4">3. Logique d'esquive et Automatisation</h4>
+            <p class="text-gray-400 text-sm mb-4">La boucle principale interroge l'ultrason via le balayage du servo et pilote les moteurs (via le PI) pour esquiver les obstacles de manière dynamique.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <pre class="text-gray-300 text-xs font-mono overflow-x-auto bg-black p-4 rounded-xl h-[300px] overflow-y-auto"><code>def automatique():
+    set_angle(130)
+    while True:
+        distance = distance_cm()
+
+        if distance <= 50:
+            set_angle(180) 
+            sleep(0.7)
+            dist_gauche = distance_cm()
+        
+            set_angle(80)  
+            sleep(0.7)
+            dist_droite = distance_cm()
+        
+            set_angle(130) 
+        
+            if dist_gauche > 50:
+                move_rover([0, 0, 30], 0.701) 
+            elif dist_droite > 50:
+                move_rover([0, 0, -30], 0.701) 
+            else:
+                move_rover([0, 0, 30], 2.55) 
+
+        else:
+            move_rover([0.5, 0, 0], 0.1)</code></pre>
+                
+                <div class="bg-white p-2 rounded-xl flex items-center justify-center h-[300px]">
+                    <img src="schema-automatisation.jpg" alt="Schéma logique de l'automatisation du rover" class="w-full h-full object-contain rounded-lg" onerror="this.src='https://placehold.co/600x400/f3f4f6/a1a1aa?text=Schéma+de+l\'automatisation'"/>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VUE DÉTAIL : CATIA V5 -->
+  <div id="view-catia" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    <div class="flex flex-col gap-12">
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center text-center max-w-4xl mx-auto">
+        <span class="inline-block px-3 py-1 mb-4 text-xs font-bold text-emerald-700 bg-emerald-50 rounded-full">Ingénierie Mécanique & CAO</span>
+        <h1 class="text-4xl font-black tracking-tight mb-4">Modélisation & Assemblage CATIA V5</h1>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          Démonstration de ma progression sur CATIA V5 : de la modélisation d'une pièce complexe jusqu'à la gestion d'un assemblage robotique de 335 pièces avec validation physique.
+        </p>
+      </div>
+      
+      <div class="bg-white p-8 rounded-[2.5rem] bento-shadow grid grid-cols-1 lg:grid-cols-3 gap-8 items-center border-t-8 border-emerald-500">
+        <div class="lg:col-span-1 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-500 font-bold tracking-wider text-sm uppercase">Phase 1 : Conception de Pièce</span>
+            <span class="px-2.5 py-0.5 text-xs font-bold text-emerald-700 bg-emerald-50 rounded-full">Automne 2025</span>
+          </div>
+          <h2 class="text-2xl font-black">Découverte de l'atelier PartDesign </h2>
+          <p class="text-gray-600">
+            Démonstration d'une pièce avancée avec utilisation des multiples fonctions de l'atelier <strong>Part Design</strong>. La pièce a été réalisée à partir d'un modèle à reproduire en 2 heures.
+          </p>
+          <p class="text-gray-500 text-sm italic mt-2">
+            👉 Utilisez votre souris ou votre doigt pour manipuler la pièce en 3D sous tous ses angles.
+          </p>
+        </div>
+        <div class="lg:col-span-2 h-[400px] w-full bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 relative">
+          <model-viewer src="ma-piece.glb" camera-controls auto-rotate shadow-intensity="1" loading="lazy" class="w-full h-full bg-gray-50 outline-none">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 font-medium text-sm text-center px-4" slot="poster">
+              Chargement de la 3D...<br>
+            </div>
+          </model-viewer>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center py-4">
+        <div class="w-1 h-16 bg-gray-300 rounded-full"></div>
+      </div>
+      
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col gap-8 border-t-8 border-gray-900">
+        <div class="text-center max-w-3xl mx-auto mb-4">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <span class="text-gray-900 font-bold tracking-wider text-sm uppercase">Phase 2 : Assemblage Complexe (Projet IPSA)</span>
+            <span class="px-2.5 py-0.5 text-xs font-bold text-gray-800 bg-gray-200 rounded-full">Printemps 2026</span>
+          </div>
+          <h2 class="text-3xl font-black mt-2 mb-4">Robot de Combat (335 pièces)</h2>
+          <p class="text-gray-600">Intégration d'un système complet. Gestion de l'arborescence, des contraintes d'assemblage et conception des différents sous-systèmes mécaniques et électroniques. Ce projet a été réalisé en respectant un cahier des charges strict imposant des contraintes précises de dimensions maximales, de masse totale et de coût réel de fabrication.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 flex flex-col items-center">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">Vue d'ensemble - Extérieur</h3>
+            <div class="w-full bg-white rounded-2xl overflow-hidden aspect-video relative shadow-inner">
+              <model-viewer src="robot-exterieur.glb" camera-controls auto-rotate shadow-intensity="1" loading="lazy" class="w-full h-full outline-none">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 font-medium text-sm text-center px-4" slot="poster">
+                  Chargement de la 3D...<br>
+                </div>
+              </model-viewer>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 flex flex-col items-center">
+            <h3 class="text-xl font-bold mb-4 text-gray-800">Vue d'ensemble - Intérieur</h3>
+            <div class="w-full bg-white rounded-2xl overflow-hidden aspect-video relative shadow-inner">
+              <model-viewer src="robot-interieur.glb" camera-controls auto-rotate shadow-intensity="1" loading="lazy" class="w-full h-full outline-none">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 font-medium text-sm text-center px-4" slot="poster">
+                  Chargement de la 3D...<br>
+                </div>
+              </model-viewer>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <h3 class="text-2xl font-bold mb-6 text-gray-900">Composants & Sous-Systèmes</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex flex-col gap-4">
+              <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 h-64 flex items-center justify-center p-4">
+                <img src="image_a87921.png" alt="Système de transmission complexe" class="w-full h-full object-contain" />
+              </div>
+              <div class="px-2">
+                <h4 class="font-bold text-gray-900 text-lg">Transmission & Motorisation</h4>
+                <p class="text-gray-600 text-sm mt-1">Conception et intégration des moteurs et des roues mécanum à partir des pièces disponible dans le commerce</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 h-64 flex items-center justify-center p-4">
+                <img src="image_a8797a.png" alt="Système Piston et Crémaillère" class="w-full h-full object-contain" />
+              </div>
+              <div class="px-2">
+                <h4 class="font-bold text-gray-900 text-lg">Système d'actionnement (Piston/Crémaillère)</h4>
+                <p class="text-gray-600 text-sm mt-1">Modélisation du mécanisme d'attaque linéaire. Intégration du pignon d'entraînement et des brides de fixation sur le cylindre.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 h-64 flex items-center justify-center p-4">
+                <img src="image_a8799f.png" alt="Module de brouillage radio" class="w-full h-full object-contain" />
+              </div>
+              <div class="px-2">
+                <h4 class="font-bold text-gray-900 text-lg">Module Brouilleur Radio</h4>
+                <p class="text-gray-600 text-sm mt-1">Conception du boîtier électronique incluant les ouïes de ventilation et la connectique antenne.</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="bg-white rounded-3xl overflow-hidden border border-gray-200 h-64 flex items-center justify-center p-4">
+                <img src="image_a87900.png" alt="Système d'antenne" class="w-full h-full object-contain" />
+              </div>
+              <div class="px-2">
+                <h4 class="font-bold text-gray-900 text-lg">Circuit & Antenne</h4>
+                <p class="text-gray-600 text-sm mt-1">Intégration d'une carte PCB modélisée et d'un système de transmission type CROSSFIRE avec raccords coaxiaux.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARTIE 3 : Analyse du Centre de Gravité -->
+      <div class="bg-gray-900 p-8 rounded-[2.5rem] bento-shadow grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-white">
+        <div class="flex flex-col gap-6 order-2 lg:order-1">
+          <span class="inline-block px-3 py-1 mb-2 text-xs font-bold text-red-400 bg-red-900/30 rounded-full w-fit">Validation Physique & Stabilité</span>
+          <h2 class="text-3xl font-black tracking-tight text-white">Analyse de Masse & Centre de Gravité</h2>
+          <p class="text-gray-300 leading-relaxed text-lg">
+            Pour valider la conception du robot de combat, une étude de la répartition des masses a été réalisée afin d'assurer la stabilité dynamique lors des manœuvres.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-400">
+            <li><strong>Prise en compte des sous-systèmes :</strong> Blindage en Titane de grade Aéronautique(1 786 g), Plaque inférieure, Système Piston et Moteurs.</li>
+            <li><strong>Résultat :</strong> Validation du centre de gravité global (G) situé aux coordonnées précises de <span class="font-semibold text-white">(223.2, 70.2 mm)</span>. Cette position basse et centrée diminue le risque de basculement lors des impacts, tout en répartissant uniformément la charge sur les 4 roues pour garantir leur adhérence.</li>
+          </ul>
+        </div>
+        <div class="order-1 lg:order-2 bg-white rounded-3xl p-2 overflow-hidden border border-gray-700 flex items-center justify-center">
+          <img src="image_a71fa3.jpg" alt="Analyse du Centre de Gravité (Vue X-Z)" class="w-full h-auto rounded-[1.25rem]" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VUE DÉTAIL : MACHINE CNC -->
+  <div id="view-cnc" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    
+    <div class="flex flex-col gap-12">
+      <!-- En-tête CNC -->
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center text-center max-w-4xl mx-auto border-t-8 border-purple-500">
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-4">
+          <span class="px-3 py-1 text-xs font-bold text-purple-700 bg-purple-50 rounded-full">Intégration & Usinage</span>
+          <span class="px-3 py-1 text-xs font-bold text-gray-700 bg-gray-100 rounded-full">Année 2020</span>
+        </div>
+        <h1 class="text-4xl font-black tracking-tight mb-4">Montage d'une CNC Industrielle (1.5m²)</h1>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          Assemblage complet d'une machine à commande numérique grand format. Ce projet a developpé mes compétences en mécanique de précision, en électricité industrielle et en modélisation 3D pour la résolution de problèmes d'adaptation.
+        </p>
+      </div>
+
+      <!-- Section : Montage et Déplacement -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-4 rounded-[2.5rem] bento-shadow flex items-center justify-center">
+          <img src="photo-cnc-globale.jpg" alt="Vue globale de la CNC 1.5m²" class="w-full h-auto rounded-3xl object-cover" onerror="this.src='https://placehold.co/800x600/f3f4f6/a1a1aa?text=Photo+CNC+Globale'"/>
+        </div>
+        <div class="bg-gray-900 text-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center">
+          <h3 class="text-2xl font-black tracking-tight mb-4">Mécanique & Déplacement de Précision</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            L'assemblage d'une surface d'usinage de 1.5m² implique une gestion du parallélisme et de l'équerrage. 
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-400">
+            <li>Calibration des axes pour assurer un déplacement fluide et sans jeu mécanique.</li>
+            <li>Paramétrage des pas pour garantir la résolution et la précision d'usinage.</li>
+            <li>Synchronisation des moteurs sur l'axe Y.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section : Électronique et Triphasé -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center order-2 lg:order-1 border-t-8 border-amber-500">
+          <h3 class="text-2xl font-black tracking-tight mb-4">Électricité & Commande Numérique</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            La gestion de la puissance et de l'intelligence de la machine.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            <li><strong>Câblage Triphasé :</strong> Compréhension et raccordement sécurisé de l'alimentation triphasée pour la broche d'usinage (gestion des phases, neutre et terre).</li>
+            <li><strong>Interface CNC :</strong> Câblage et configuration de la carte de commande numérique (fins de course, arrêt d'urgence,...).</li>
+            <li><strong>Variateur de fréquence (VFD) :</strong> Paramétrage de la vitesse de rotation de la fraiseuse en fonction du matériau et de la mèche utilisés.</li>
+          </ul>
+        </div>
+        <div class="bg-white p-4 rounded-[2.5rem] bento-shadow flex items-center justify-center order-1 lg:order-2">
+          <img src="photo-cnc-elec.jpg" alt="Montage électronique et variateur triphasé" class="w-full h-auto rounded-3xl object-cover" onerror="this.src='https://placehold.co/800x600/f3f4f6/a1a1aa?text=Photo+Electronique+VFD'"/>
+        </div>
+      </div>
+
+      <!-- Section : Résolution de problème / Fixation 3D -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1 bg-gray-900 text-white p-10 rounded-[2.5rem] bento-shadow flex flex-col justify-center border-t-8 border-blue-500">
+          <h3 class="text-2xl font-black tracking-tight mb-4">Résolution de Problème</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Lors des premiers essais, la fraiseuse vibrait excessivement : la seule fixation d'origine sur l'axe Z ne suffisait pas à la maintenir fermement face aux efforts de coupe.          </p>
+          <p class="text-gray-300 leading-relaxed">
+            <strong>Solution :</strong> Modélisation sur mesure sous CAO et impression 3D d'une seconde bride de fixation, permettant de rigidifier le maintien de la broche, de supprimer les vibrations et de garantir la précision d'usinage.
+          </p>
+        </div>
+        <div class="lg:col-span-2 bg-white p-4 rounded-[2.5rem] bento-shadow flex items-center justify-center">
+          <img src="PXL_20220924_174005748.jpg" alt="Assemblage de l'axe Z et fixation de la broche" class="w-full h-[400px] lg:h-[500px] rounded-3xl object-cover shadow-sm" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VUE DÉTAIL : FUSION 360 -->
+  <div id="view-fusion" class="max-w-7xl mx-auto p-6 md:p-10 hidden mt-10 flex-grow">
+    <button onclick="showHome()" class="inline-flex items-center text-gray-500 hover:text-black mb-8 transition-colors font-semibold bg-white px-5 py-2 rounded-full bento-shadow">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      Retour
+    </button>
+    
+    <div class="flex flex-col gap-12">
+      <!-- En-tête Fusion 360 -->
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow flex flex-col items-center text-center max-w-4xl mx-auto border-t-8 border-orange-500">
+        <span class="px-3 py-1 text-xs font-bold text-orange-700 bg-orange-50 rounded-full mb-4">CAO & Prototypage Rapide</span>
+        <h1 class="text-4xl font-black tracking-tight mb-4">Conception 3D sous Autodesk Fusion 360</h1>
+        <p class="text-gray-600 leading-relaxed text-lg">
+          Application de la modélisation et de la fabrication additive à des problématiques mécaniques réelles : de la rétro-ingénierie d'une pièce technique à partir d'une photo jusqu'au développement d'un support embarqué pour drone FPV.
+        </p>
+      </div>
+
+      <!-- Projet 1 : Pièce de garage depuis photo -->
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch border-t-8 border-amber-500">
+        <div class="flex flex-col justify-center">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-amber-600 font-bold tracking-wider text-sm uppercase">Projet 1 : Rétro-conception</span>
+            <span class="px-2.5 py-0.5 text-xs font-bold text-amber-700 bg-amber-50 rounded-full">Hiver 2023</span>
+          </div>
+          <h2 class="text-3xl font-black tracking-tight mb-4">Pièce de Garage reproduite depuis Photo</h2>
+          <p class="text-gray-600 leading-relaxed text-lg mb-4">
+            Recréation à l'identique d'une pièce de mécanisme de garage cassée et introuvable dans le commerce, réalisée sans plan d'origine à partir d'une simple photographie.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            <li><strong>Étalonnage d'échelle :</strong> Importation de la photo dans Fusion 360 et mise à l'échelle précise grâce à une mesure témoin prise sur la pièce d'origine.</li>
+            <li><strong>Esquisses contraintes :</strong> Reconstitution vectorielle des contours géométriques.</li>
+            <li><strong>Modélisation volumique :</strong> Extrusion, congés de raccordement pour éviter les amorces de rupture, et adaptation des tolérances pour impression 3D.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-3xl border border-gray-100 flex items-center justify-center min-h-[300px]">
+          <img src="photo-fusion-garage.png" alt="Modélisation Fusion 360 de la pièce de garage reproduite depuis photo" class="w-full h-auto max-h-[400px] rounded-2xl object-cover shadow-sm" onerror="this.src='https://placehold.co/800x600/f3f4f6/a1a1aa?text=Photo+Fusion+Piece+Garage'"/>
+        </div>
+      </div>
+
+      <!-- Projet 2 : Porte-téléphone pour Drone FPV -->
+      <div class="bg-white p-10 rounded-[2.5rem] bento-shadow grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch border-t-8 border-teal-500">
+        <div class="flex flex-col justify-center order-2 lg:order-1">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-teal-600 font-bold tracking-wider text-sm uppercase">Projet 2 : Support Embarqué</span>
+            <span class="px-2.5 py-0.5 text-xs font-bold text-teal-700 bg-teal-50 rounded-full">Année 2024</span>
+          </div>
+          <h2 class="text-3xl font-black tracking-tight mb-4">Porte-Téléphone pour Drone FPV 5"</h2>
+          <p class="text-gray-600 leading-relaxed text-lg mb-4">
+            Conception sur mesure d'un porte-téléphone fixé directement sur le drone FPV 5 pouces pour y mettre un téléphone afin qu'il filme le vol.
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            <li><strong>Intégration mécanique :</strong> Prise sur les entretoises en aluminium du châssis carbone avec inclinaison adaptée à l'assiette de vol rapide.</li>
+            <li><strong>Maintien & Sécurité :</strong> Système de pinces pour empêcher l'éjection du téléphone sous forte accélération ou virage serré.</li>
+            <li><strong>Conception pour impression 3D :</strong> Modélisation adaptée à l'impression 3D en minimisant les supports afin d'économiser du PLA.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-3xl border border-gray-100 flex items-center justify-center min-h-[300px] order-1 lg:order-2">
+          <img src="photo-fusion-porte-tel.png" alt="Modélisation Fusion 360 du support téléphone pour drone FPV" class="w-full h-auto max-h-[400px] rounded-2xl object-cover shadow-sm" onerror="this.src='https://placehold.co/800x600/f3f4f6/a1a1aa?text=Photo+Fusion+Porte+Telephone'"/>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer global -->
+  <footer class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-400 text-sm border-t border-gray-200 mt-12 mb-4 w-full">
+      <p>&copy; 2026 Jean Toussaint. Tous droits réservés.</p>
+  </footer>
+
+  <!-- SCRIPT DE NAVIGATION SPA AVEC GESTION DE L'HISTORIQUE -->
+  <script>
+    const projectViews = ['view-greensky', 'view-fpv', 'view-arduino', 'view-rover', 'view-catia', 'view-cnc', 'view-fusion'];
+
+    function renderView(viewId) {
+      if (viewId === 'view-home' || !viewId) {
+        projectViews.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.classList.add('hidden');
+        });
+        const homeEl = document.getElementById('view-home');
+        if (homeEl) homeEl.classList.remove('hidden');
+      } else {
+        const homeEl = document.getElementById('view-home');
+        if (homeEl) homeEl.classList.add('hidden');
+        projectViews.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            if (id === viewId) {
+              el.classList.remove('hidden');
+            } else {
+              el.classList.add('hidden');
+            }
+          }
+        });
+      }
+      window.scrollTo(0, 0);
+    }
+
+    function showProject(id, updateHistory = true) {
+      renderView(id);
+      if (updateHistory) {
+        const slug = id.replace('view-', '');
+        history.pushState({ view: id }, '', '#' + slug);
+      }
+    }
+
+    function showHome(updateHistory = true) {
+      renderView('view-home');
+      if (updateHistory) {
+        history.pushState({ view: 'view-home' }, '', window.location.pathname + window.location.search);
+      }
+    }
+
+    // Gestion du bouton Précédent / Suivant du navigateur et de la souris
+    window.addEventListener('popstate', (event) => {
+      if (event.state && event.state.view) {
+        renderView(event.state.view);
+      } else {
+        initViewFromUrl();
+      }
+    });
+
+    // Chargement initial avec prise en charge des ancres (#fusion, #rover, etc.)
+    function initViewFromUrl() {
+      const hash = window.location.hash.replace('#', '');
+      const targetId = 'view-' + hash;
+      if (hash && projectViews.includes(targetId)) {
+        renderView(targetId);
+        history.replaceState({ view: targetId }, '', '#' + hash);
+      } else {
+        renderView('view-home');
+        history.replaceState({ view: 'view-home' }, '', window.location.pathname + window.location.search);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', initViewFromUrl);
+  </script>
+
+</body>
+</html>
